@@ -21,4 +21,11 @@ public class LoginScreen extends BaseScreen{
     }
 
 
+
+    public LocationScreen tapLocationBtn(){
+        getWebElement(By.xpath("//android.widget.ScrollView/android.view.View[7]")).click();
+        return getInstance(LocationScreen.class);
+    }
+
+
 }
