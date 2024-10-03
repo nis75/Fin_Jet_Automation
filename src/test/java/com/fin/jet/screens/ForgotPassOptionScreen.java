@@ -26,6 +26,7 @@ public class ForgotPassOptionScreen extends BaseScreen {
 
     }
     public LoginScreen tapNextBtn(){
+
         getWebElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")).click();
         return getInstance(LoginScreen.class);
     }

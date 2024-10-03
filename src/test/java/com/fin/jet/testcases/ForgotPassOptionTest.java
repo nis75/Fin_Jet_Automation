@@ -12,6 +12,7 @@ public class ForgotPassOptionTest extends BaseTest{
      LoginScreen loginScreen;
     @Test(priority =1)
     public void fillUserIDInfo(){
+
         loginScreen=screen.getInstance(ForgotPassOptionScreen.class)
                 .fillUserID("samman")
                 .fillAccountNumber("123123")

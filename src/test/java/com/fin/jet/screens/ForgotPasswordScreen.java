@@ -30,6 +30,7 @@ private By userId=By.xpath("//androidx.compose.ui.platform.ComposeView/android.v
     }
 
     public ForgotPassOptionScreen tapMobileNumber(){
+
         waitForElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]"));
         getWebElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]")).click();
         return getInstance(ForgotPassOptionScreen.class);

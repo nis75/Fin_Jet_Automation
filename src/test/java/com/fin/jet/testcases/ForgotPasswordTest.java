@@ -18,6 +18,7 @@ public class ForgotPasswordTest extends BaseTest{
         Assert.assertTrue(forgotPassword.hasByMobileNumber());
         Assert.assertTrue(forgotPassword.hasByUserID());
 
+
     }
 
 
