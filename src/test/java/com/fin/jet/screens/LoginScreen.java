@@ -21,4 +21,13 @@ public class LoginScreen extends BaseScreen{
     }
 
 
+    public ForgotPasswordScreen tapForgotPasswordBtn(){
+        getWebElement(By.xpath("//android.widget.ScrollView/android.view.View[2]/android.widget.Button")).click();
+        return getInstance(ForgotPasswordScreen.class);
+    }
+
+    public boolean hasForgotPasswordBtn(){
+        return getWebElements(By.xpath("//android.widget.ScrollView/android.view.View[2]/android.widget.Button")).size()>0;
+    }
+
 }
