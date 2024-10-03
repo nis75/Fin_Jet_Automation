@@ -27,6 +27,7 @@ public class LoginScreen extends BaseScreen{
     }
 
     public boolean hasForgotPasswordBtn(){
+
         return getWebElements(By.xpath("//android.widget.ScrollView/android.view.View[2]/android.widget.Button")).size()>0;
     }
 
