@@ -11,14 +11,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class SinUpTest extends BaseTest{
+public class SinUpTest extends BaseTest {
 
-SinUpScreen sinUpScreen;
+    SinUpScreen sinUpScreen;
+
     @Test
-    public void sinUpShouldSuccess(){
+    public void sinUpShouldSuccess() {
         try {
             Date dateOfBirth = new SimpleDateFormat("yyyy-MM-dd").parse("1990-01-01");
-            sinUpScreen =screen.getInstance(HomeScreen.class)
+            sinUpScreen = screen.getInstance(HomeScreen.class)
                     .tapSinUpLink()
                     .tapGetStartBtn()
                     .fillUserId("xzcxzv")
@@ -34,8 +35,21 @@ SinUpScreen sinUpScreen;
         //signUpScreen.fillDateOfBirth(dateOfBirth);
 
 
-
     }
 
+    @Test
+    public void sinUpShouldSuccess2() {
 
-}
+            sinUpScreen = screen.getInstance(HomeScreen.class)
+                    .tapSinUpLink()
+                    .tapGetStartBtn()
+                    .fillUserId("xzcxzv")
+                    .fillAccountNo("cxvcv")
+                    .fillAccountName("xcvxcv")
+                    .fillMobileNo("ihjkkkj")
+                    .fillDateOfBirth()
+                    .fillNidNo("xcvv");
+            //.clickAgreeBtn();
+        }
+
+    }

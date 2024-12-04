@@ -8,6 +8,19 @@ public class MasterScreen extends BaseScreen {
         super(driver);
     }
     public boolean hasTransferBtn(){
-        return getWebElements(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]")).size()>0;
+        return getWebElements(By.xpath("//android.view.View[@content-desc=\"Transfer\"]")).size()>0;
     }
+    public FundTransferScreen tapTransferBtn(){
+        By transferBtn = By.xpath("//android.view.View[@content-desc=\"Transfer\"]");
+        waitForElement(transferBtn);
+        getWebElement(transferBtn).click();
+        return getInstance(FundTransferScreen.class);
+    }
+    public MoreInfoScreen tapMoreInfoBtn(){
+        By moreInfoBtn = By.xpath("//android.view.View[@content-desc=\"More\"]");
+        waitForElement(moreInfoBtn);
+        getWebElement(moreInfoBtn).click();
+        return getInstance(MoreInfoScreen.class);
+    }
+
 }
